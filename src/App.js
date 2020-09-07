@@ -2,7 +2,8 @@ import React from "react";
 import { Route, Link } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
-import Profile from "./components/Profile";
+import Profiles from "./components/Profiles";
+import HistorySample from "./components/HistorySample";
 
 function App() {
   return (
@@ -17,10 +18,14 @@ function App() {
         <Link to="/profiles">
           <li>Profile</li>
         </Link>
+        <Link to="/history">
+          <li>History</li>
+        </Link>
       </ul>
       <Route path="/" component={Home} exact />
       <Route path="/about" component={About} />
-      <Route path="/profiles/:username" component={Profile} />
+      <Route path="/profiles" component={Profiles} />
+      <Route path='/history' component={HistorySample} />
     </div>
   );
 }
