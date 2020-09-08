@@ -1,6 +1,6 @@
 import React from "react";
 import Profile from "./Profile";
-import { Link, Route,} from "react-router-dom";
+import { Route, NavLink } from "react-router-dom";
 
 function Profiles() {
   return (
@@ -8,10 +8,14 @@ function Profiles() {
       <h3>사용자 목록</h3>
       <ul>
         <li>
-          <Link to="/profiles/sangjun">sangjun</Link>
+          <NavLink to="/profiles/sangjun" activeStyle={{ color: "dodgerblue" }}>
+            sangjun
+          </NavLink>
         </li>
         <li>
-          <Link to="/profiles/kimchi">kimchi</Link>
+          <NavLink to="/profiles/kimchi" activeStyle={{ color: "dodgerblue" }}>
+            kimchi
+          </NavLink>
         </li>
       </ul>
 
